@@ -1,0 +1,1017 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    background-color: #0b0b0e; /* Fundo mais escuro e profundo */
+    color: #e0e0e0; /* Cor do texto mais suave */
+}
+
+header {
+    background-color: #1a1a1f; /* Fundo do header ligeiramente diferente */
+    padding: 20px 30px; /* Mais padding para o header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #00c4cc; /* Borda inferior com a cor de destaque */
+}
+
+header h1 {
+    color: #00e0ff; /* Cor do título com destaque */
+    font-size: 1.8em; /* Tamanho da fonte do título */
+    margin: 0;
+}
+
+.btn-carrinho {
+    background-color: #00c4cc; /* Ciano/Azul elétrico como cor principal */
+    color: #000;
+    padding: 12px 20px; /* Mais padding para o botão */
+    border-radius: 8px; /* Borda mais arredondada */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+    box-shadow: 0 4px 10px rgba(0, 196, 204, 0.4); /* Sombra para destaque */
+}
+
+.btn-carrinho:hover {
+    background-color: #00e0ff; /* Cor mais clara no hover */
+    transform: translateY(-2px); /* Efeito de "subir" no hover */
+    box-shadow: 0 6px 15px rgba(0, 224, 255, 0.6);
+}
+
+.catalogo-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cards um pouco maiores */
+    gap: 25px; /* Mais espaçamento entre os cards */
+    padding: 30px;
+    max-width: 1200px; /* Largura máxima para o catálogo */
+    margin: 30px auto; /* Centraliza o catálogo */
+}
+
+.produto {
+    background-color: #1f1f25; /* Fundo do card mais escuro e distinto */
+    border-radius: 12px; /* Bordas mais arredondadas para os cards */
+    padding: 20px; /* Mais padding interno */
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra padrão do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para o hover */
+    border: 1px solid #2a2a30; /* Borda sutil */
+}
+
+.produto:hover {
+    transform: translateY(-5px) scale(1.02); /* Efeito de "subir" e leve "zoom" no hover */
+    box-shadow: 0 12px 25px rgba(0, 224, 255, 0.2); /* Sombra com brilho da cor de destaque */
+    border-color: #00e0ff; /* Borda com brilho no hover */
+}
+
+.produto img {
+    max-width: 100%;
+    height: 180px; /* Altura fixa para imagens para consistência */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #0d0d10; /* Fundo para a imagem, caso ela tenha transparência */
+    padding: 5px; /* Pequeno padding para a imagem */
+}
+
+.produto h2 { /* Estiliza o nome do produto */
+    color: #e0e0e0;
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.produto p { /* Estiliza o preço */
+    color: #00e0ff; /* Preço com a cor de destaque */
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.produto input[type="number"] {
+    width: 70px; /* Largura um pouco maior para o input de quantidade */
+    padding: 8px 5px;
+    margin: 10px auto; /* Centraliza o input */
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #0d0d10;
+    color: #e0e0e0;
+    text-align: center;
+    -moz-appearance: textfield; /* Remove setas padrão do Firefox */
+    appearance: textfield; /* Adicionado para compatibilidade padrão */
+}
+
+.produto input[type="number"]::-webkit-outer-spin-button,
+.produto input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Remove setas padrão do Chrome/Safari */
+    appearance: none; /* Adicionado para compatibilidade padrão */
+    margin: 0;
+}
+
+
+.produto button {
+    background-color: #00c4cc; /* Ciano/Azul elétrico para o botão */
+    color: #000;
+    padding: 10px 18px; /* Mais padding para o botão */
+    border: none;
+    border-radius: 6px; /* Bordas mais arredondadas */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transição suave */
+    margin-top: 10px;
+}
+
+.produto button:hover {
+    background-color: #00e0ff; /* Cor mais clara no hover */
+    transform: translateY(-2px); /* Efeito de "subir" no hover */
+    box-shadow: 0 4px 12px rgba(0, 224, 255, 0.4); /* Sombra no hover */
+}
+
+/* Responsividade básica - ajustes para telas menores */
+@media (max-width: 768px) {
+    .catalogo-produtos {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 20px;
+        gap: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+
+    .btn-carrinho {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalogo-produtos {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+        padding: 15px;
+    }
+}
+/* Estilo para o contador do carrinho */
+.btn-carrinho {
+    position: relative; /* Necessário para posicionar o span do contador */
+}
+
+.contador-carrinho {
+    background-color: #ff4d4d; /* Cor vermelha para o badge */
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    border-radius: 50%; /* Faz a forma de bolinha */
+    padding: 3px 7px;
+    position: absolute;
+    top: -8px; /* Ajusta a posição vertical */
+    right: -8px; /* Ajusta a posição horizontal */
+    min-width: 20px; /* Garante que a bolinha não fique muito pequena */
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #a00000;
+    display: none; /* Esconde por padrão, só mostra se tiver itens */
+}
+/* Estilo para o controle de quantidade com botões */
+.quantidade-controle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0; /* Espaçamento acima e abaixo */
+    gap: 8px; /* Espaço entre os botões e o input */
+}
+
+.quantidade-controle .btn-quantidade {
+    background-color: #008c99; /* Um tom de ciano mais escuro para os botões +/- */
+    color: #fff;
+    padding: 6px 12px; /* Tamanho do padding */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 35px; /* Largura fixa para os botões */
+    height: 35px; /* Altura fixa para os botões */
+    display: flex; /* Para centralizar o texto/símbolo */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.quantidade-controle .btn-quantidade:hover {
+    background-color: #00e0ff; /* Cor de destaque no hover */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 224, 255, 0.3);
+}
+
+/* Ajuste no input de quantidade dentro do controle */
+.quantidade-controle .quantidade {
+    width: 60px; /* Largura ajustada para caber entre os botões */
+    margin: 0; /* Remove a margem padrão para se alinhar com flexbox */
+    padding: 8px 5px;
+    text-align: center;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    border: 1px solid #3a3a40; /* Borda mais suave */
+    background-color: #121215; /* Fundo mais escuro para o input */
+    color: #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Remover as setas padrão para navegadores Webkit (Chrome, Safari) */
+.quantidade-controle .quantidade::-webkit-outer-spin-button,
+.quantidade-controle .quantidade::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Ajuste no botão de adicionar ao carrinho para melhor alinhamento */
+.btn-adicionar-carrinho {
+    width: 100%; /* Garante que o botão ocupe toda a largura disponível */
+}
+
+/* Ajuste do botão Adicionar ao Carrinho para ter a mesma cor do CSS */
+/* Isso é importante porque o JS muda o background-color diretamente */
+.produto button.btn-adicionar-carrinho {
+    background-color: #00c4cc; /* Mantém a cor original definida no CSS */
+}
+/* --- Estilos para a página do Carrinho (carrinho.html) --- */
+
+/* Ajuste do header para o carrinho */
+.carrinho-header h1 {
+    font-size: 1.8em;
+    color: #00e0ff;
+}
+
+.carrinho-header .btn-carrinho {
+    /* Mantém o estilo do botão de carrinho da vitrine, mas ajusta se necessário */
+    background-color: #00c4cc;
+    color: #000;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 196, 204, 0.4);
+}
+
+.carrinho-header .btn-carrinho:hover {
+    background-color: #00e0ff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 224, 255, 0.6);
+}
+
+
+/* Estilo da lista de produtos no carrinho */
+.lista-carrinho {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0;
+    margin: 30px auto;
+    max-width: 900px; /* Largura máxima da lista */
+    background-color: #1f1f25; /* Fundo similar aos cards da vitrine */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #2a2a30;
+    padding: 20px;
+}
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaça os elementos */
+    padding: 15px 0;
+    border-bottom: 1px dashed #3a3a40; /* Linha divisória sutil */
+    color: #e0e0e0;
+}
+
+.item-carrinho:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+.item-carrinho img {
+    width: 70px; /* Tamanho da imagem do produto no carrinho */
+    height: 70px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-right: 15px;
+    background-color: #0d0d10;
+    padding: 3px;
+}
+
+.info-item {
+    flex-grow: 1; /* Permite que o bloco de informações ocupe espaço */
+    text-align: left;
+}
+
+.info-item h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: #00e0ff; /* Cor do nome do produto */
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #b0b0b0; /* Cor para quantidade/preço unitário */
+}
+
+.preco-item {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #00e0ff; /* Cor do preço total do item */
+    margin-left: 15px;
+}
+
+/* Estilo para o total geral */
+.total-geral {
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #1a1a1f; /* Fundo do total geral */
+    border-radius: 12px;
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00e0ff; /* Cor do total */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #2a2a30;
+}
+
+/* Estilo para as ações do carrinho (botões) */
+.acoes-carrinho {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 20px; /* Espaço entre os botões */
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.acoes-carrinho button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+}
+
+.acoes-carrinho button:hover {
+    transform: translateY(-3px); /* Efeito de "subir" no hover */
+    box-shadow: 0 8px 18px rgba(0, 224, 255, 0.4); /* Sombra mais intensa no hover */
+}
+
+/* Botão Limpar Carrinho */
+.acoes-carrinho button:first-child { /* Ou use uma classe específica, ex: .btn-limpar */
+    background-color: #cc0000; /* Vermelho vibrante para "Limpar" */
+    color: #fff;
+}
+
+.acoes-carrinho button:first-child:hover {
+    background-color: #ff3333; /* Vermelho mais claro no hover */
+}
+
+/* Botão Finalizar Compra */
+.acoes-carrinho button:last-child { /* Ou use uma classe específica, ex: .btn-finalizar */
+    background-color: #00c4cc; /* Ciano/Azul elétrico para "Finalizar" */
+    color: #000;
+}
+
+.acoes-carrinho button:last-child:hover {
+    background-color: #00e0ff; /* Ciano/Azul elétrico mais claro no hover */
+}
+
+/* Responsividade para a página do carrinho */
+@media (max-width: 768px) {
+    .lista-carrinho, .total-geral {
+        margin: 20px 15px; /* Margem menor em telas pequenas */
+        padding: 15px;
+    }
+
+    .item-carrinho {
+        flex-wrap: wrap; /* Permite que os itens quebrem linha */
+        justify-content: center;
+        text-align: center;
+    }
+
+    .item-carrinho img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .info-item {
+        width: 100%; /* Ocupa toda a largura */
+        margin-bottom: 10px;
+    }
+
+    .preco-item {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .acoes-carrinho {
+        flex-direction: column; /* Botões empilhados */
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .acoes-carrinho button {
+        width: 100%; /* Ocupa a largura total */
+    }
+}
+/* --- Estilos para os controles de quantidade dentro do item do carrinho --- */
+.quantidade-controle-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaço entre os botões e o input */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.quantidade-controle-carrinho .btn-quantidade-carrinho {
+    background-color: #008c99; /* Cor do botão +/- no carrinho */
+    color: #fff;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 25px; /* Tamanho menor para o carrinho */
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantidade-controle-carrinho .btn-quantidade-carrinho:hover {
+    background-color: #00e0ff;
+}
+
+.quantidade-controle-carrinho .quantidade-carrinho {
+    width: 40px; /* Largura do input de quantidade no carrinho */
+    padding: 5px 3px;
+    text-align: center;
+    border: 1px solid #3a3a40;
+    border-radius: 4px;
+    background-color: #121215;
+    color: #e0e0e0;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.quantidade-controle-carrinho .quantidade-carrinho::-webkit-outer-spin-button,
+.quantidade-controle-carrinho .quantidade-carrinho::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Estilo para o botão de remover item individual */
+.btn-remover-item {
+    background-color: #a00000; /* Vermelho escuro para remover */
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 0.85em; /* Tamanho um pouco menor */
+}
+
+.btn-remover-item:hover {
+    background-color: #ff3333; /* Vermelho mais claro no hover */
+    transform: translateY(-1px);
+}
+
+/* Ajustes para responsividade na página do carrinho */
+@media (max-width: 768px) {
+    .item-carrinho {
+        flex-direction: column; /* Empilha os elementos do item */
+        align-items: flex-start; /* Alinha à esquerda */
+        text-align: left;
+    }
+
+    .item-carrinho img {
+        margin-bottom: 10px;
+    }
+
+    .info-item {
+        width: 100%; /* Ocupa toda a largura */
+        margin-bottom: 10px;
+    }
+
+    .quantidade-controle-carrinho {
+        justify-content: flex-start; /* Alinha os controles à esquerda */
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .preco-item {
+        width: 100%; /* Ocupa toda a largura */
+        text-align: left;
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .btn-remover-item {
+        width: 100%; /* Ocupa a largura total */
+        margin-top: 10px;
+    }
+}
+/* --- Estilos para a Página de Detalhes do Produto (produto-detalhe.html) --- */
+
+.detalhes-produto-container {
+    max-width: 1000px; /* Largura máxima para o container de detalhes */
+    margin: 40px auto; /* Centraliza */
+    padding: 30px;
+    background-color: #1f1f25; /* Fundo similar aos cards da vitrine */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2a2a30;
+    display: flex; /* Para alinhar imagem e info lado a lado */
+    flex-direction: column; /* Padrão em coluna para mobile */
+    align-items: center; /* Centraliza itens na coluna */
+    gap: 30px; /* Espaço entre a imagem e as informações */
+}
+
+/* Container flex para imagem e info */
+.produto-detalhe-conteudo {
+    display: flex;
+    flex-direction: column; /* Padrão em coluna */
+    gap: 30px;
+    width: 100%;
+}
+
+/* Estilo da imagem grande do produto */
+.produto-detalhe-imagem {
+    flex-shrink: 0; /* Não permite que a imagem encolha */
+    width: 100%; /* Ocupa a largura total em mobile */
+    max-width: 400px; /* Largura máxima para a imagem */
+    background-color: #0d0d10;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 10px rgba(0, 224, 255, 0.1);
+}
+
+.produto-detalhe-imagem img {
+    max-width: 100%;
+    max-height: 400px; /* Altura máxima para a imagem */
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Estilo das informações do produto */
+.produto-detalhe-info {
+    flex-grow: 1; /* Permite que as informações ocupem o espaço restante */
+    text-align: center; /* Centraliza o texto em mobile */
+}
+
+.produto-detalhe-info h2 {
+    color: #00e0ff; /* Cor do título do produto */
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px rgba(0, 224, 255, 0.3);
+}
+
+.detalhe-preco {
+    color: #00e0ff; /* Cor do preço */
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.detalhe-descricao {
+    color: #c0c0c0; /* Cor da descrição */
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px; /* Limita largura da descrição para leitura */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para o controle de quantidade (+/-) na página de detalhes */
+.quantidade-controle-detalhe {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os botões */
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.quantidade-controle-detalhe .btn-quantidade {
+    background-color: #008c99;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 45px; /* Tamanho maior para os botões */
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.quantidade-controle-detalhe .btn-quantidade:hover {
+    background-color: #00e0ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 224, 255, 0.4);
+}
+
+.quantidade-controle-detalhe .quantidade {
+    width: 80px; /* Largura maior para o input */
+    padding: 10px 5px;
+    text-align: center;
+    border: 1px solid #3a3a40;
+    border-radius: 6px;
+    background-color: #121215;
+    color: #e0e0e0;
+    font-size: 1.2em;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+.quantidade-controle-detalhe .quantidade::-webkit-outer-spin-button,
+.quantidade-controle-detalhe .quantidade::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Estilo para o botão "Adicionar ao Carrinho" na página de detalhes */
+.detalhes-produto-container .btn-adicionar-carrinho {
+    background-color: #00c4cc;
+    color: #000;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 196, 204, 0.4);
+    display: block; /* Para ocupar a largura total e centralizar */
+    margin: 0 auto; /* Centraliza o botão */
+    max-width: 350px; /* Limita a largura do botão */
+    text-transform: uppercase;
+}
+
+.detalhes-produto-container .btn-adicionar-carrinho:hover {
+    background-color: #00e0ff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 224, 255, 0.6);
+}
+
+/* Estilo para a mensagem de produto não encontrado */
+.produto-detalhe-nao-encontrado {
+    text-align: center;
+    padding: 50px;
+    color: #e0e0e0;
+}
+.produto-detalhe-nao-encontrado h2 {
+    color: #ff4d4d;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.produto-detalhe-nao-encontrado p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Estilo para o link na vitrine (remover sublinhado) */
+.link-produto-detalhe {
+    text-decoration: none;
+    color: inherit; /* Herda a cor do pai (h3) */
+    display: block; /* Para envolver toda a imagem/título */
+}
+.link-produto-detalhe:hover h3 {
+    color: #00e0ff; /* Mudar cor do título no hover do link */
+    text-decoration: underline; /* Adicionar sublinhado no título no hover */
+}
+.link-produto-detalhe:hover img {
+    transform: scale(1.05); /* Leve zoom na imagem no hover do link */
+    transition: transform 0.3s ease;
+}
+
+
+/* Responsividade para a página de detalhes */
+@media (min-width: 769px) {
+    .detalhes-produto-container {
+        flex-direction: row; /* Coloca imagem e info lado a lado em telas maiores */
+        align-items: flex-start; /* Alinha no topo */
+    }
+
+    .produto-detalhe-conteudo {
+        flex-direction: row;
+    }
+
+    .produto-detalhe-info {
+        text-align: left; /* Alinha o texto à esquerda em telas maiores */
+    }
+    .detalhe-descricao {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .detalhes-produto-container .btn-adicionar-carrinho {
+        margin-left: 0; /* Alinha o botão à esquerda */
+    }
+}
+
+@media (max-width: 480px) {
+    .detalhes-produto-container {
+        padding: 20px;
+    }
+    .produto-detalhe-info h2 {
+        font-size: 1.8em;
+    }
+    .detalhe-preco {
+        font-size: 2em;
+    }
+    .detalhe-descricao {
+        font-size: 1em;
+    }
+    .quantidade-controle-detalhe .btn-quantidade {
+        padding: 8px 15px;
+        font-size: 1.1em;
+        min-width: 40px;
+        height: 40px;
+    }
+    .quantidade-controle-detalhe .quantidade {
+        width: 60px;
+        font-size: 1em;
+    }
+    .detalhes-produto-container .btn-adicionar-carrinho {
+        padding: 12px 30px;
+        font-size: 1.2em;
+    }
+}
+/* Exemplo para aplicar em CSS */
+img {
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+}
+/* Estilo para todas as imagens de produto */
+img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.btn-carrinho {
+  background-color: #00eaff;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.btn-carrinho:hover {
+  transform: scale(1.05);
+}
+
+.contador-carrinho {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 3px 7px;
+  font-weight: bold;
+}
+.cabecalho {
+  position: relative;
+  padding: 30px 20px 20px;
+  background-color: #0d0d0d;
+  text-align: center;
+}
+
+.logo-nexus {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.5rem;
+  color: #00e6e6;
+  text-shadow: 0 0 10px #00e6e6, 0 0 20px #005555;
+  letter-spacing: 4px;
+  animation: glow 2s ease-in-out infinite alternate;
+  margin: 0;
+}
+
+.carrinho-container {
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  margin-top: 10px;
+}
+
+.btn-carrinho {
+  color: #00e6e6;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid #00e6e6;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.3s;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.btn-carrinho:hover {
+  background-color: #00e6e6;
+  color: #0d0d0d;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00e6e6;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #009999;
+  }
+}
+.busca-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#barra-busca {
+  width: 60%;
+  max-width: 500px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #00e6e6;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: #fff;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+#barra-busca::placeholder {
+  color: #aaa;
+}
+
+#barra-busca:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+}
+.slogan {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #00ffff;
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 0 0 5px #00ffff;
+}
+.catalogo-produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.produto {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  width: 220px;
+  height: 400px; /* Altura fixa */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 0 10px #0ff4;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 16px #0ff;
+}
+
+.produto img {
+  max-width: 100%;
+  max-height: 130px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.produto h3 {
+  font-size: 0.9rem;
+  color: #0ff;
+  height: 40px; /* altura fixa para o título */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+}
+
+.preco {
+  color: #ccc;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.btn-adicionar-carrinho {
+  padding: 8px 12px;
+  background-color: transparent;
+  border: 1px solid #0ff;
+  color: #0ff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-adicionar-carrinho:hover {
+  background-color: #0ff;
+  color: #111;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.cabecalho-esquerda {
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecalho-direita {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Estilo da barra de busca */
+#barra-busca {
+  padding: 10px;
+  border: 1px solid #0ff;
+  background-color: #111;
+  color: white;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Botão do carrinho */
+.btn-carrinho {
+  background-color: transparent;
+  border: 1px solid #0ff;
+  color: #0ff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-carrinho:hover {
+  background-color: #0ff;
+  color: #111;
+}

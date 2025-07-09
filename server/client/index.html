@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus Games</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="cabecalho">
+    <h1 class="logo-nexus">NEXUS GAMES</h1>
+    <p class="slogan">Seu setup começa aqui.</p>
+    <div class="cabecalho-direita">
+      <input type="text" id="barra-busca" placeholder="🔍 Buscar produtos..." />
+      <a href="carrinho.html" class="btn-carrinho">🛒 Ver Carrinho <span id="contador-carrinho">0</span></a>
+    </div>
+  </header>
+
+  <section class="topicos">
+    <h2>🎯 Ofertas da Semana</h2>
+    <p>Periféricos gamer com até 40% OFF — aproveite enquanto durarem os estoques!</p>
+    <h2>⚙️ Montagem Personalizada</h2>
+    <p>Monte seu setup ideal com a nossa consultoria especializada.</p>
+  </section>
+
+  <main class="conteudo-principal">
+    <section id="catalogo" class="catalogo-produtos">
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=teclado-redragon-kumara">
+          <img src="imagens/teclado-redragon-kumara.jpg" alt="Teclado Mecânico RGB Redragon Kumara">
+          <h3>Teclado Mecânico RGB Redragon Kumara</h3>
+        </a>
+        <p class="preco">R$ 249,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('teclado-redragon-kumara')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=mouse-logitech-g502">
+          <img src="imagens/mouse-logitech-g502-hero.jpg" alt="Mouse Gamer Logitech G502 HERO">
+          <h3>Mouse Gamer Logitech G502 HERO</h3>
+        </a>
+        <p class="preco">R$ 299,00</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('mouse-logitech-g502')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=headset-hyperx">
+          <img src="imagens/headset-hyperx-cloud-stinger.jpg" alt="Headset HyperX Cloud Stinger">
+          <h3>Headset HyperX Cloud Stinger</h3>
+        </a>
+        <p class="preco">R$ 349,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('headset-hyperx')">Adicionar ao Carrinho</button>
+      </div>
+      
+
+<!-- CONTINUA NA PRÓXIMA RESPOSTA com os demais produtos e o script -->
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=cadeira-thunderx3">
+          <img src="imagens/cadeira-gamer-thunderx3.jpg" alt="Cadeira Gamer ThunderX3">
+          <h3>Cadeira Gamer ThunderX3</h3>
+        </a>
+        <p class="preco">R$ 1.199,00</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('cadeira-thunderx3')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=monitor-samsung-144hz">
+          <img src="imagens/monitor-samsung-144hz.jpg" alt="Monitor Gamer Samsung 24'' 144Hz">
+          <h3>Monitor Gamer Samsung 24'' 144Hz</h3>
+        </a>
+        <p class="preco">R$ 999,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('monitor-samsung-144hz')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=placa-video-rtx4060">
+          <img src="imagens/placa-video-rtx4060.jpg" alt="Placa de Vídeo RTX 4060 8GB">
+          <h3>Placa de Vídeo RTX 4060 8GB</h3>
+        </a>
+        <p class="preco">R$ 1.999,00</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('placa-video-rtx4060')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=gabinete-gamer-rgb">
+          <img src="imagens/gabinete-gamer-rgb.jpg" alt="Gabinete Gamer com LED RGB">
+          <h3>Gabinete Gamer com LED RGB</h3>
+        </a>
+        <p class="preco">R$ 399,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('gabinete-gamer-rgb')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=mousepad-gamer">
+          <img src="imagens/mousepad-gamer.jpg" alt="Mousepad Gamer Extra Grande">
+          <h3>Mousepad Gamer Extra Grande</h3>
+        </a>
+        <p class="preco">R$ 89,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('mousepad-gamer')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=controle-xbox">
+          <img src="imagens/controle-xbox.jpg" alt="Controle Xbox Series X">
+          <h3>Controle Xbox Series X</h3>
+        </a>
+        <p class="preco">R$ 449,00</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('controle-xbox')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=webcam-logitech">
+          <img src="imagens/webcam-logitech-c920.jpg" alt="Webcam Full HD Logitech C920">
+          <h3>Webcam Full HD Logitech C920</h3>
+        </a>
+        <p class="preco">R$ 499,00</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('webcam-logitech')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=microfone-fifine">
+          <img src="imagens/microfone-fifine-k669b.jpg" alt="Microfone Gamer Fifine K669B">
+          <h3>Microfone Gamer Fifine K669B</h3>
+        </a>
+        <p class="preco">R$ 279,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('microfone-fifine')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=ssd-kingston">
+          <img src="imagens/ssd-kingston-1tb.jpg" alt="SSD NVMe 1TB Kingston">
+          <h3>SSD NVMe 1TB Kingston</h3>
+        </a>
+        <p class="preco">R$ 499,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('ssd-kingston')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=memoria-ram-16gb">
+          <img src="imagens/memoria-ram-16gb-3200mhz.jpg" alt="Memória RAM DDR4 16GB 3200MHz">
+          <h3>Memória RAM DDR4 16GB 3200MHz</h3>
+        </a>
+        <p class="preco">R$ 299,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('memoria-ram-16gb')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=fonte-650w">
+          <img src="imagens/fonte-650w-80-plus-bronze.jpg" alt="Fonte 650W 80 Plus Bronze">
+          <h3>Fonte 650W 80 Plus Bronze</h3>
+        </a>
+        <p class="preco">R$ 349,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('fonte-650w')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=cooler-rgb">
+          <img src="imagens/cooler-cpu-rgb.jpg" alt="Cooler para CPU com RGB">
+          <h3>Cooler para CPU com RGB</h3>
+        </a>
+        <p class="preco">R$ 149,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('cooler-rgb')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=kit-gamer">
+          <img src="imagens/kit-gamer.jpg" alt="Kit Gamer (Teclado + Mouse + Headset)">
+          <h3>Kit Gamer (Teclado + Mouse + Headset)</h3>
+        </a>
+        <p class="preco">R$ 499,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('kit-gamer')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=suporte-headset">
+          <img src="imagens/suporte-headset-rgb.jpg" alt="Suporte RGB para Headset">
+          <h3>Suporte RGB para Headset</h3>
+        </a>
+        <p class="preco">R$ 129,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('suporte-headset')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=led-setup">
+          <img src="imagens/iluminacao-led-setup.jpg" alt="Iluminação LED para Setup">
+          <h3>Iluminação LED para Setup</h3>
+        </a>
+        <p class="preco">R$ 89,90</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('led-setup')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=notebook-gamer">
+          <img src="imagens/notebook-gamer-ryzen7-rtx3050.jpg" alt="Notebook Gamer Ryzen 7 + RTX 3050">
+          <h3>Notebook Gamer Ryzen 7 + RTX 3050</h3>
+        </a>
+        <p class="preco">R$ 4.999,00</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('notebook-gamer')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="produto">
+        <a href="produto-detalhe.html?slug=pc-gamer-rx6600">
+          <img src="imagens/pc-gamer-ryzen5-rx6600.jpg" alt="PC Gamer Completo Ryzen 5 + RX 6600">
+          <h3>PC Gamer Completo Ryzen 5 + RX 6600</h3>
+        </a>
+        <p class="preco">R$ 5.999,00</p>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('pc-gamer-rx6600')">Adicionar ao Carrinho</button>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2025 - Nexus Games | Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    function adicionarAoCarrinho(slug) {
+      const carrinho = JSON.parse(localStorage.getItem('carrinho')) || {};
+      carrinho[slug] = (carrinho[slug] || 0) + 1;
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+      atualizarContadorCarrinho();
+    }
+
+    function atualizarContadorCarrinho() {
+      const carrinho = JSON.parse(localStorage.getItem('carrinho')) || {};
+      const total = Object.values(carrinho).reduce((acc, qtd) => acc + qtd, 0);
+      document.getElementById('contador-carrinho').textContent = total;
+    }
+
+    document.addEventListener('DOMContentLoaded', atualizarContadorCarrinho);
+  </script>
+  <script src="js/produtos.js"></script>
+  <script src="js/app.js"></script>
+
+
+</body>
+</html>
+

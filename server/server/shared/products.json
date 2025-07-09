@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nome": "Notebook Lenovo i5",
+    "descricao": "Notebook com 8GB RAM e SSD 256GB",
+    "preco": 3499.90,
+    "imagem": "link-da-imagem-do-produto-1"
+  },
+  {
+    "id": 2,
+    "nome": "Smartphone Galaxy S21",
+    "descricao": "Smartphone Samsung com 128GB",
+    "preco": 2899.00,
+    "imagem": "link-da-imagem-do-produto-2"
+  },
+  {
+    "id": 3,
+    "nome": "Fone Bluetooth JBL",
+    "descricao": "Fone de ouvido sem fio com cancelamento de ruído",
+    "preco": 499.90,
+    "imagem": "link-da-imagem-do-produto-3"
+  },
+  {
+    "id": 4,
+    "nome": "Smartwatch Xiaomi",
+    "descricao": "Relógio inteligente com monitor cardíaco",
+    "preco": 399.00,
+    "imagem": "link-da-imagem-do-produto-4"
+  }
+]

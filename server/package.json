@@ -1,0 +1,13 @@
+{
+  "name": "projeto_amazon_clone",
+  "version": "1.0.0",
+  "description": "Loja virtual estilo Amazon",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server/app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
