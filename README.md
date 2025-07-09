@@ -1,13 +1,12 @@
-# 🎮 Nexus Games
+ 🎮 Nexus Games
 
 **Seu setup começa aqui.**  
-Loja virtual voltada para o público gamer, com visual neon e experiência imersiva. Projeto em desenvolvimento com foco em catálogo interativo, carrinho funcional e responsividade.
-
+Loja virtual voltada para o público gamer, com visual neon e experiência imersiva. Projeto em desenvolvimento com foco em catálogo interativo.
 ---
 
-## 📁 Estrutura do Projeto
+ Estrutura do Projeto
 
-```
+
 nexus-games/
 ├── client/
 │   ├── css/
@@ -19,11 +18,11 @@ nexus-games/
 ├── server/
 ├── package.json
 └── README.md
-```
 
----
 
-## 🛠️ Funcionalidades Atuais
+
+
+ Funcionalidades Atuais
 
 - Exibição de catálogo de produtos com imagens e detalhes
 - Filtro por nome e por preço
@@ -31,36 +30,30 @@ nexus-games/
 - Carrinho com contador e persistência via `localStorage`
 - Tema visual inspirado em estética gamer (neon + fundo escuro)
 
----
-
-## 📌 Melhorias Planejadas
+ Melhorias Planejadas
 
 Consulte o arquivo [`nexus_games_checklist.md`](./nexus_games_checklist.md) para ver a lista detalhada de melhorias e funcionalidades planejadas.
 
----
 
-## 🚀 Tecnologias Utilizadas
+ Tecnologias Utilizadas
 
 - HTML5
 - CSS3
-- JavaScript (ES6)
+- JavaScript 
 - Node.js (back-end em construção)
 
----
 
-## 👨‍💻 Autor
+ Autor
 
-Projeto desenvolvido por [Seu Nome Aqui].  
+Projeto desenvolvido por Eder Firmino.  
 Entre em contato para colaborações ou sugestões!
 
----
 
-## 📸 Preview
+ Preview
 
-![preview da loja](./client/imagens/preview.png) *(adicione uma imagem real quando disponível)*
+[preview da loja](./client/imagens/preview.png) 
 
----
 
-## 📄 Licença
+ Licença
 
 Este projeto está licenciado sob a licença MIT.
